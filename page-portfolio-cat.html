@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" script-src="unsafe-inline">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="fonts/inter-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter-bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style/vendor-bundle.css">
+  <link rel="stylesheet" href="style/main.css">
+  <title>Портфолио</title>
+</head>
+
+<body class="indent-reset site">
+  <div aria-hidden="true" id="site-top"></div>
+  <div class="site__container">
+    <header class="site__header">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__inner text-sm">
+            <div>Пенза, ул. Генерала Глазунова, 3</div>
+            <nav>
+              <ul class="site-nav">
+                <li>
+                  <a href="page-buyers.html">Покупателям</a>
+                </li>
+                <li>
+                  <a href="page-news.html">Новости</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="header-main">
+        <div class="container">
+          <div class="header-main__inner">
+            <div class="header-main__burger">
+              <button class="burger" type="button" aria-label="Меню">
+                <svg class="burger__icon" width="32" viewBox="0 0 50 50" aria-hidden="true">
+                  <path class="burger__line burger__line--top" d="M7 9.5H43.2105C46.5807 9.5 50 12.2586 50 17.0692C50 21.8798 47.5313 24.5 43.2105 24.5H25" />
+                  <path class="burger__line burger__line--middle" d="m 7,25 h 36" />
+                  <path class="burger__line burger__line--bottom" d="M43 40.5H6.78947C6.78947 40.5 0 39.7451 0 32.6264C0 25.5076 6.78947 24.5 6.78947 24.5H25" />
+                </svg>
+              </button>
+            </div>
+            <div class="header-main__logo">
+              <a href="page-main.html">
+                <img src="img/default/logo.png" width="76" height="51" alt="Арт мебель">
+              </a>
+            </div>
+            <nav class="header-main__nav">
+              <ul class="portfolio-nav">
+                <li>
+                  <a href="page-portfolio-cat.html">Кухни</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Прихожие</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Детские</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Шкафы</a>
+                </li>
+                <li class="has-child">
+                  <a href="#">Ещё</a>
+                  <ul>
+                    <li>
+                      <a href="page-portfolio-cat.html">Гостиные</a>
+                    </li>
+                    <li>
+                      <a href="page-portfolio-cat.html">Спальни</a>
+                    </li>
+                    <li>
+                      <a href="page-portfolio-cat.html">Мягкая мебель</a>
+                    </li>
+                    <li>
+                      <a href="page-portfolio-cat.html">Кровати</a>
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="page-portfolio.html">Портфолио</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header-main__phone">
+              <a href="tel:+79588390929">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+                <span>+7 (958) 839-09-29</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-modal" aria-hidden="true">
+        <div class="header-modal__content">
+          <div class="header-modal__inner">
+            <nav>
+              <ul class="portfolio-nav">
+                <li>
+                  <a href="page-portfolio-cat.html">Кухни</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Прихожие</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Детские</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Шкафы</a>
+                </li>
+                <li class="has-child">
+                  <a href="#">Ещё</a>
+                  <ul>
+                    <li>
+                      <a href="page-portfolio-cat.html">Гостиные</a>
+                    </li>
+                    <li>
+                      <a href="page-portfolio-cat.html">Спальни</a>
+                    </li>
+                    <li>
+                      <a href="page-portfolio-cat.html">Мягкая мебель</a>
+                    </li>
+                    <li>
+                      <a href="page-portfolio-cat.html">Кровати</a>
+                    </li>
+                  </ul>
+
+                </li>
+                <li>
+                  <a href="page-portfolio.html">Портфолио</a>
+                </li>
+              </ul>
+              <hr>
+              <ul class="site-nav">
+                <li>
+                  <a href="page-buyers.html">Покупателям</a>
+                </li>
+                <li>
+                  <a href="page-news.html">Новости</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <hr>
+            <div><b>Пенза, ул. Генерала Глазунова, 3</b></div>
+            <hr>
+            <div class="header-modal__phone">
+              <a href="tel:+79588390929">
+                +7 (958) 839-09-29
+              </a>
+            </div>
+            <hr>
+            <ul class="list-reset header-modal__messengers">
+              <li>
+                <a class="messenger-btn" href="#">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg>
+                  <span>Написать в Telegram</span>
+                </a>
+              </li>
+              <li>
+                <a class="messenger-btn" href="#">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#whatsapp"></use>
+                  </svg>
+                  <span>Написать в Whatsapp</span>
+                </a>
+              </li>
+              <li>
+                <a class="messenger-btn" href="#">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#viber"></use>
+                  </svg>
+                  <span>Написать в Viber</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="site__content">
+      <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <div class="container">
+          <a href="page-main.html">Главная</a>&ensp;&gt;&ensp;<span class="current-item">Портфолио</span>
+        </div>
+      </div>
+      <main class="pt-3 pt-xl-4">
+
+      </main>
+    </div>
+    <footer class="site__footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-3">
+              <div class="footer-top__logo">
+                <a href="page-main.html">
+                  <img src="img/default/footer-logo.svg" width="191" height="50" alt="Арт мебель">
+                </a>
+              </div>
+            </div>
+            <nav class="col-6 col-md-4 col-xl-3">
+              <div class="footer-top__label">Мы предлагаем</div>
+              <ul class="footer-top__menu text-sm">
+                <li>
+                  <a href="page-portfolio-cat.html">Кухни</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Прихожие</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Детские</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Шкафы</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Гостиные</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Спальни</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Мягкая мебель</a>
+                </li>
+                <li>
+                  <a href="page-portfolio-cat.html">Кровати</a>
+                </li>
+              </ul>
+            </nav>
+            <nav class="col-6 col-md-4 col-xl-3">
+              <div class="footer-top__label">О нас</div>
+              <ul class="footer-top__menu text-sm">
+                <li>
+                  <a href="page-portfolio.html">Портфолио</a>
+                </li>
+                <li>
+                  <a href="page-buyers.html">Покупателям</a>
+                </li>
+                <li>
+                  <a href="page-news.html">Новости</a>
+                </li>
+                <li>
+                  <a href="page-contact.html">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="col-12 col-md-4 col-xl-3">
+              <div class="footer-top__label">Свяжитесь с нами</div>
+              <div class="footer-top__phone title-sm"><a href="tel:+79588390929">+7 (958) 839-09-29</a></div>
+              <div class="footer-top__adress text-sm">Пенза, ул. Генерала Глазунова, 3</div>
+              <div class="footer-top__schedule text-sm">пн-пт 9:30–17:00</div>
+              <div class="footer-top__email text-sm"><a href="mailto:art-mebel@mail.ru">art-mebel@mail.ru</a></div>
+              <ul class="list-reset footer-top__messengers">
+                <li>
+                  <a href="#">
+                    <svg width="26" height="26" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#telegram"></use>
+                    </svg>
+                    <span>Написать в Telegram</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="26" height="26" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#whatsapp"></use>
+                    </svg>
+                    <span>Написать в Whatsapp</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="26" height="26" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#viber"></use>
+                    </svg>
+                    <span>Написать в Viber</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-sm">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-9">
+              <div class="footer-bottom__links">
+                <div>
+                  <span>&copy; АртМебель 2023</span>
+                </div>
+                <div>
+                  <a href="#" target="_blank" rel="nofollow noreferer noopener">Политика Конфиденциальности</a>
+                </div>
+                <div>
+                  <a href="#" target="_blank" rel="nofollow noreferer noopener">Соглашение об обработке персональных данных</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="footer-bottom__dev">
+                <a href="https://re-activno.ru/" target="_blank" rel="nofollow noreferer noopener">
+                  <span class="visually-hidden">Сделано в студии "Реактивно"</span>
+                  <svg width="128" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#icon-dev"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll-top" id="scroll-top">
+      <a class="scroll-top__link" href="#site-top" aria-label="Scroll to top">
+        <svg width="20" height="10" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#icon-up"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="get-request-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="32" height="32" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="title-md modal__title">
+              <div>Нравится проект, хочу такой же</div>
+              <div class="is-accent modal__request-title"></div>
+            </div>
+            <form class="form modal__form" id="get-request-modal-form" data-validate>
+              <input type="hidden" name="Страница" value="Название или урл">
+              <input type="hidden" name="Форма" value="Хочу такой& же проект">
+              <div>
+                <input class="form__input" type="text" name="Имя" placeholder="Ваше имя" data-validate="name" required>
+              </div>
+              <div>
+                <input class="form__input" type="tel" name="Контактный телефон" placeholder="+7 (___) ___-__-__" data-validate="phone" required>
+              </div>
+              <div>
+                <input class="form__checkbox" type="checkbox" id="get-request-modal-confirm" data-validate="confirm" required>
+                <label class="text-sm" for="get-request-modal-confirm">Я согласен(на) с <a href="#" target="_blank" rel="nofollow noreferer noopener">Политикой Конфиденциальности</a> и <a href="#" target="_blank" rel="nofollow noreferer noopener">Соглашением об обработке персональных данных</a></label>
+              </div>
+              <div class="modal__bottom-btn">
+                <button class="btn-reset btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="get-project-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="32" height="32" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="title-md modal__title">Получить проект</div>
+            <form class="form modal__form" id="get-project-modal-form" data-validate>
+              <input type="hidden" name="Страница" value="Название или урл">
+              <input type="hidden" name="Форма" value="Получить проект">
+              <div>
+                <input class="form__input" type="text" name="Имя" placeholder="Ваше имя" data-validate="name" required>
+              </div>
+              <div>
+                <input class="form__input" type="tel" name="Контактный телефон" placeholder="+7 (___) ___-__-__" data-validate="phone" required>
+              </div>
+              <div>
+                <textarea class="form__input form__textarea" name="Комментарий" placeholder="Комментарий"></textarea>
+              </div>
+              <div>
+                <input class="form__checkbox" type="checkbox" id="get-project-modal-confirm" data-validate="confirm" required>
+                <label class="text-sm" for="get-project-modal-confirm">Я согласен(на) с <a href="#" target="_blank" rel="nofollow noreferer noopener">Политикой Конфиденциальности</a> и <a href="#" target="_blank" rel="nofollow noreferer noopener">Соглашением об обработке персональных данных</a></label>
+              </div>
+              <div class="modal__bottom-btn">
+                <button class="btn-reset btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="get-application-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="32" height="32" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="title-md modal__title">Оставить заявку</div>
+            <form class="form modal__form" id="get-application-modal-form" data-validate>
+              <input type="hidden" name="Страница" value="Название или урл">
+              <input type="hidden" name="Форма" value="Оставить заявку">
+              <div>
+                <input class="form__input" type="text" name="Имя" placeholder="Ваше имя" data-validate="name" required>
+              </div>
+              <div>
+                <input class="form__input" type="tel" name="Контактный телефон" placeholder="+7 (___) ___-__-__" data-validate="phone" required>
+              </div>
+              <div>
+                <input class="form__checkbox" type="checkbox" id="get-application-modal-confirm" data-validate="confirm" required>
+                <label class="text-sm" for="get-application-modal-confirm">Я согласен(на) с <a href="#" target="_blank" rel="nofollow noreferer noopener">Политикой Конфиденциальности</a> и <a href="#" target="_blank" rel="nofollow noreferer noopener">Соглашением об обработке персональных данных</a></label>
+              </div>
+              <div class="modal__bottom-btn">
+                <button class="btn-reset btn" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hystmodal hystmodal--simple" id="send-ok-modal" aria-hidden="true">
+      <div class="hystmodal__wrap">
+        <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+          <div class="modal">
+            <button class="btn-reset modal__close" type="button" aria-label="Close window" data-hystclose>
+              <svg class="modal__close-icon" width="32" height="32" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <div class="title-md modal__title">Спасибо за заявку!</div>
+            <div class="modal__text">Мы свяжемся с вами в ближайшее время и обсудим все детали.</div>
+            <div class="modal__bottom-btn">
+              <button class="btn-reset btn" data-hystclose>Хорошо</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor-bundle.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
