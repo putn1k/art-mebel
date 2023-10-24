@@ -1,21 +1,24 @@
 import {
-  isEscKey
+  isEscKey,
+  breakpointChecker
 } from './utils.js';
+
 import {
   Options,
 } from './options.js';
 
-const initStickyHeader = ( node, target, offset ) => {
-  const contentNode = document.querySelector( '.site__content' );
-  if ( !target ) return;
+const resetOffsetTop = ( node ) => {
+  if ( !node ) return;
+  document.documentElement.style.setProperty( '--offset-top', `${node.offsetHeight}px` );
+};
 
+const initStickyHeader = ( node, target ) => {
+  if ( !node || !target ) return;
   const cb = ( entries ) => {
     entries.forEach( ( entry ) => {
       if ( !entry.isIntersecting ) {
-        contentNode ? contentNode.style.marginTop = `${offset}px` : '';
         node.classList.add( 'is-sticky' );
       } else {
-        contentNode ? contentNode.style.marginTop = '' : '';
         node.classList.remove( 'is-sticky' );
       }
     } );
@@ -25,11 +28,10 @@ const initStickyHeader = ( node, target, offset ) => {
 };
 
 export const initHeaderMenu = () => {
+  const contentNode = document.querySelector( '.site__content' );
   const headerTopNode = document.querySelector( '.header-top' );
   const headerNode = document.querySelector( '.header-main' );
 
-  if ( !headerNode ) return;
-  const OFFSET = headerNode.offsetHeight;
   const modalNode = document.querySelector( '.header-modal' );
   const modalTriggerNode = document.querySelector( '.header-main__burger button' );
 
@@ -50,7 +52,6 @@ export const initHeaderMenu = () => {
 
   function openModal() {
     document.documentElement.classList.add( 'is-block-scroll' );
-    modalNode.style.setProperty( '--top-pos', `${OFFSET}px` );
     modalNode.setAttribute( 'aria-hidden', 'false' );
     modalTriggerNode.classList.add( 'is-expanded' );
     document.addEventListener( 'keydown', onEscKeydown );
@@ -65,7 +66,13 @@ export const initHeaderMenu = () => {
     modalNode.removeEventListener( 'click', onMissclickHandler );
   }
 
-  initStickyHeader( headerNode, headerTopNode, OFFSET );
+  initStickyHeader( headerNode, headerTopNode );
+  initStickyHeader( contentNode, headerTopNode );
+  breakpointChecker( () => {
+    resetOffsetTop( headerNode );
+  }, () => {
+    resetOffsetTop( headerNode );
+  } );
 
   modalTriggerNode.addEventListener( 'click', ( evt ) => {
     evt.preventDefault();

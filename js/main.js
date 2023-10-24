@@ -26,15 +26,20 @@ import {
   initMap,
 } from './modules/ymap.js';
 
+import {
+  initYTubeVideo,
+} from './modules/yt-video.js';
+
 document.addEventListener( 'DOMContentLoaded', () => {
   iosVhFix();
+  initHeaderMenu();
 
   window.addEventListener( 'load', () => {
     validateForms();
-    initHeaderMenu();
     initModals();
     initSliders();
     initScrollTop();
     initMap();
+    initYTubeVideo();
   } );
 } );
