@@ -1,0 +1,31 @@
+.project-resume {
+  padding: 24px;
+  color: var(--main-text);
+  background-color: var(--contrast-bg);
+  border-radius: var(--b-radius);
+
+  &__terms {
+    display: grid;
+    row-gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__term {
+    font-weight: 600;
+
+    & dd {
+      margin-left: 0;
+      margin-top: 8px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  @include media-min ($xl) {
+    &__btn {
+      width: auto;
+    }
+  }
+}

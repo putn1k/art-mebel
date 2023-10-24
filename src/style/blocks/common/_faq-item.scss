@@ -1,0 +1,67 @@
+.faq-item {
+  --cross-state: translateY(-50%);
+
+  color: var(--main-text);
+  background-color: var(--main-bg);
+  padding: 24px 16px;
+  flex-grow: 1;
+  border-radius: var(--b-radius);
+  box-shadow: 1px 3px 24px 0 rgba(31, 45, 51, 0.04);
+
+  &[open] {
+    --cross-state: translateY(-50%) rotate(45deg);
+  }
+
+  &__question {
+    position: relative;
+    padding-right: 46px;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 36px;
+      height: 36px;
+      background-color: var(--accent);
+      background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27 18.2812C27 17.9706 26.7484 17.7187 26.4375 17.7187L18.8437 17.7187L18.8437 9.5625C18.8437 9.25186 18.5922 9 18.2812 9C17.9703 9 17.7187 9.25186 17.7187 9.5625L17.7187 17.7187L9.5625 17.7187C9.25159 17.7187 9 17.9706 9 18.2812C9 18.5919 9.25159 18.8437 9.5625 18.8437L17.7187 18.8437L17.7187 26.4375C17.7187 26.6349 17.8204 26.8086 17.9742 26.909C18.0626 26.9666 18.1681 27 18.2812 27C18.5922 27 18.8437 26.7481 18.8437 26.4375L18.8437 18.8437L26.4375 18.8437C26.7484 18.8437 27 18.5919 27 18.2812Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      transform: var(--cross-state);
+      transition: transform .15s ease-in-out;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    list-style: none;
+  }
+
+  &__answer {
+    @include cms-text;
+
+    margin-top: 24px;
+
+    & a {
+      text-decoration-color: inherit;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding: 30px 24px;
+
+    &__answer {
+      & a {
+        transition: text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          text-decoration-color: transparent;
+        }
+      }
+    }
+  }
+}

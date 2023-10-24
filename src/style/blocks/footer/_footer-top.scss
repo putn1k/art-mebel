@@ -1,0 +1,136 @@
+.footer-top {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--main-text-inv);
+  background-color: var(--main-bg-inv);
+
+  &__logo {
+    text-align: center;
+    margin-bottom: 30px;
+
+    & img {
+      width: 191px;
+      height: 50px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 16px;
+  }
+
+  &__menu {
+    @include list-reset;
+
+    margin-bottom: 30px;
+
+    & li {
+      margin-bottom: 10px;
+    }
+
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 10px;
+
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__adress {
+    margin-bottom: 10px;
+  }
+
+  &__schedule {
+    margin-bottom: 10px;
+    opacity: 0.8;
+  }
+
+  &__email {
+    margin-bottom: 10px;
+
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    margin: -12px -6px;
+
+    &>li {
+      margin: 12px 6px;
+    }
+
+    & a {
+      display: inline-flex;
+      width: 26px;
+      height: 26px;
+    }
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    & span {
+      @include visually-hidden;
+    }
+  }
+
+
+  @include media-min ($md) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include media-min ($xl) {
+    &__menu {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__phone {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__email {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__messengers {
+      & a {
+        transition: transform .15s ease-in-out;
+
+        &:hover {
+          transform: scale(1.23);
+        }
+      }
+    }
+  }
+}

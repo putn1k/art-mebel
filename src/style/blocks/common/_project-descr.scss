@@ -1,0 +1,27 @@
+.project-descr {
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &__text {
+    @include cms-text;
+
+    margin-bottom: 24px;
+  }
+
+  &__term {
+    display: flex;
+    font-size: 16px;
+
+    & dt {
+      font-weight: 600;
+
+      &::after {
+        content: ': ';
+      }
+    }
+
+    & dd {
+      margin-left: 4px;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.portfolio-nav {
+  @include list-reset;
+
+  & ul {
+    @include list-reset;
+  }
+
+  & li {
+    margin-bottom: 16px;
+  }
+
+  & a {
+    color: inherit;
+    font-weight: 600;
+  }
+
+  .has-child {
+    &>a {
+      display: none;
+    }
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+
+    & li {
+      margin-bottom: 0;
+    }
+
+    &>li {
+      position: relative;
+      margin-right: 40px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+
+      &:hover,
+      &:focus-within {
+        &>a {
+          &::after {
+            transform: rotateZ(180deg);
+          }
+        }
+
+        & ul {
+          display: block;
+        }
+      }
+
+      & ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 160px;
+        color: var(--main-text);
+        background-color: var(--main-bg);
+        z-index: 2;
+
+        @include anim(drop-down, 2s);
+
+        & a {
+          display: inline-block;
+          padding: 12px 14px;
+          width: 100%;
+          text-decoration: none;
+
+          &:hover,
+          &:focus {
+            color: var(--btn-color);
+            background-color: var(--btn-hover-bg);
+          }
+        }
+      }
+    }
+
+    & a {
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+      &:hover {
+        color: var(--link-hover);
+        text-decoration-color: inherit;
+      }
+    }
+
+    .has-child {
+      &>a {
+        display: inline;
+        white-space: nowrap;
+
+        &::after {
+          content: '';
+          display: inline-block;
+          margin-left: 8px;
+          width: 16px;
+          height: 16px;
+          background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7308 7.03061L8.73079 12.0306C8.66112 12.1005 8.57832 12.156 8.48716 12.1939C8.39599 12.2317 8.29825 12.2512 8.19954 12.2512C8.10083 12.2512 8.00309 12.2317 7.91193 12.1939C7.82077 12.156 7.73797 12.1005 7.66829 12.0306L2.66829 7.03061C2.5274 6.88972 2.44824 6.69862 2.44824 6.49936C2.44824 6.30011 2.5274 6.10901 2.66829 5.96811C2.80919 5.82722 3.00029 5.74806 3.19954 5.74806C3.3988 5.74806 3.5899 5.82722 3.73079 5.96811L8.20017 10.4375L12.6695 5.96749C12.8104 5.82659 13.0015 5.74744 13.2008 5.74744C13.4001 5.74744 13.5911 5.82659 13.732 5.96749C13.8729 6.10838 13.9521 6.29948 13.9521 6.49874C13.9521 6.698 13.8729 6.88909 13.732 7.02999L13.7308 7.03061Z' fill='%231F2D33'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          transition: transform .15s ease-in-out;
+        }
+      }
+    }
+  }
+}

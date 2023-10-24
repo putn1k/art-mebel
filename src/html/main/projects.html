@@ -1,0 +1,22 @@
+<section class="main-projects">
+  <div class="container">
+    <div class="main-projects__tagline title-lg">Изготовим мебель по картинке, дизайн проекту, вашему описанию, пожеланиям <span class=" title-md is-accent">или просто положитесь на нас</span></div>
+    <div class="main-projects__grid">
+      @include('../common/project-card.html', {title: 'Угловая кухня МДФ с фасадами soft touch'})
+      @include('../common/project-card.html', {title: 'Кухня МДФ минимализм с интегрированными ручками'})
+      @include('../common/project-card.html', {title: 'Нежная кухня МДФ в современном стиле'})
+      <div class="cb-card">
+        <div class="title-md cb-card__title">Оставьте заявку <div>на&nbsp;<span class="is-accent">бесплатный 3D-проект</span></div>
+        </div>
+        <ul class="list-reset cb-card__list">
+          <li>Поможем определиться <b>с формой и материалами</b></li>
+          <li>Подскажем, как лучше вписать мебель в пространство</li>
+          <li>Предложим несколько цветовых вариантов</li>
+        </ul>
+        <button class="btn-reset btn"
+                type="btn"
+                data-hystmodal="#get-project-modal">Получить проект</button>
+      </div>
+    </div>
+  </div>
+</section>

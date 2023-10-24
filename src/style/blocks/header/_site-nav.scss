@@ -1,0 +1,31 @@
+.site-nav {
+  @include list-reset;
+
+  & li {
+    margin-bottom: 16px;
+  }
+
+  & a {
+    color: inherit;
+    font-weight: 600;
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+
+    & li {
+      margin-bottom: 0;
+      margin-left: 40px;
+    }
+
+    & a {
+      font-weight: 400;
+      transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+      &:hover {
+        color: var(--link-hover);
+        text-decoration-color: inherit;
+      }
+    }
+  }
+}

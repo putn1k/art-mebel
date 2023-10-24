@@ -1,0 +1,23 @@
+<section class="action-block">
+  <img class="action-block__cover"
+       src="@cover"
+       alt=""
+       aria-hidden="true">
+  <div class="action-block__content">
+    <h2 class="indent-reset title-lg">@title</h2>
+    <div class="action-block__descr">
+      @descr
+    </div>
+    <div>
+      @if(context.actionType === 'button') {
+      <button class="btn-reset btn"
+              type="button"
+              @action>@actionText</button>
+      }
+      @if(context.actionType === 'link') {
+      <a class="btn"
+         href="@action">@actionText</a>
+      }
+    </div>
+  </div>
+</section>

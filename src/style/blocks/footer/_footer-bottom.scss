@@ -1,0 +1,54 @@
+.footer-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--dark-block-text);
+  background-color: var(--dark-block-bg);
+  text-align: center;
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px -4px;
+    margin-bottom: 20px;
+
+    &>* {
+      flex-basis: 100%;
+      margin: 8px 4px;
+    }
+
+    & span,
+    & a {
+      color: inherit;
+      opacity: 0.8;
+    }
+  }
+
+  @include media-min ($md) {
+    text-align: left;
+
+    &__links {
+      margin: -8px -10px;
+
+      &>* {
+        flex-basis: auto;
+        margin: 8px 10px;
+      }
+    }
+
+    &__dev {
+      text-align: right;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__links {
+      & a {
+        transition: opacity .15s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

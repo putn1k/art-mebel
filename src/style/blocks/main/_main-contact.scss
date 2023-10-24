@@ -1,0 +1,164 @@
+.main-contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &__map {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: var(--b-radius);
+
+    &>* {
+      @include full-size;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  &__tagline {
+    margin-bottom: 6px;
+  }
+
+  &__phone {
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__messengers {
+    display: flex;
+    margin: -12px -6px;
+
+    &>li {
+      margin: 12px 6px;
+    }
+
+    & a {
+      display: inline-flex;
+      width: 26px;
+      height: 26px;
+    }
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    & span {
+      @include visually-hidden;
+    }
+  }
+
+  &__adress {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  &__schedule {
+    opacity: 0.8;
+  }
+
+  &__email {
+    & a {
+      font-weight: 600;
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__socials {
+    display: grid;
+    row-gap: 6px;
+  }
+
+  &__socials-list {
+    display: flex;
+    margin: -12px -6px;
+
+    &>li {
+      margin: 12px 6px;
+    }
+
+    & a {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+    }
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    & span {
+      @include visually-hidden;
+    }
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__map {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__inner {
+      padding-left: 30px;
+    }
+
+    &__phone {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__messengers {
+      & a {
+        transition: transform .15s ease-in-out;
+
+        &:hover {
+          transform: scale(1.23);
+        }
+      }
+    }
+
+    &__email {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__socials-list {
+      & a {
+        transition: transform .15s ease-in-out;
+
+        &:hover {
+          transform: scale(1.23);
+        }
+      }
+    }
+  }
+}

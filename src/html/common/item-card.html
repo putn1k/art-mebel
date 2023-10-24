@@ -1,0 +1,11 @@
+<div class="@if(context.addClass){@addClass} item-card">
+  <img class="item-card__img"
+       src="img/mock/portfolio-card.jpg"
+       alt="">
+  <div class="item-card__meta">
+    <div class="item-card__title title-md">@title</div>
+    @if(context.descr){<div class="item-card__descr title-sm">@descr</div>}
+  </div>
+  <a class="item-card__link"
+     href="@if(context.link){@link}@if(!context.link){#}"><span class="visually-hidden">Подробнее</span></a>
+</div>

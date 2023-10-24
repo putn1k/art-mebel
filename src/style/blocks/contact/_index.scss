@@ -1,0 +1,126 @@
+.contact {
+  &__info {
+    display: grid;
+    row-gap: 24px;
+  }
+
+  &__phone {
+    & a {
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__adress {
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  &__schedule {
+    opacity: 0.8;
+  }
+
+  &__email {
+    & a {
+      font-weight: 600;
+      color: inherit;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__messengers {
+    display: grid;
+    row-gap: 16px;
+
+    & a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__socials {
+    display: grid;
+    row-gap: 12px;
+  }
+
+  &__socials-list {
+    display: flex;
+    margin: -12px;
+
+    &>li {
+      margin: 12px;
+    }
+
+    & a {
+      display: inline-flex;
+      width: 36px;
+      height: 36px;
+    }
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    & span {
+      @include visually-hidden;
+    }
+  }
+
+  &__map {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+
+    &>* {
+      @include full-size;
+    }
+  }
+
+  @include media-min ($md) {
+    &__messengers {
+      & a {
+        width: auto;
+        justify-content: flex-start;
+      }
+    }
+
+    &__map {
+      height: 400px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__phone {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__email {
+      & a {
+        transition: color .15s ease-in-out, text-decoration-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--link-hover);
+          text-decoration-color: inherit;
+        }
+      }
+    }
+
+    &__socials-list {
+      & a {
+        transition: transform .15s ease-in-out;
+
+        &:hover {
+          transform: scale(1.23);
+        }
+      }
+    }
+  }
+}

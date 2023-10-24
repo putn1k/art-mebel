@@ -1,0 +1,38 @@
+.site {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100 * var(--vh, 1vh));
+  }
+
+  &__header {
+    flex-shrink: 0;
+  }
+
+  &__content {
+    margin-top: var(--offset-top);
+    flex-grow: 1;
+  }
+
+  &__entry-title {
+    margin-bottom: 30px;
+  }
+
+  &__footer {
+    flex-shrink: 0;
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      margin-top: 0;
+
+      &.is-sticky {
+        margin-top: var(--offset-top);
+      }
+    }
+
+    &__entry-title {
+      margin-bottom: 40px;
+    }
+  }
+}

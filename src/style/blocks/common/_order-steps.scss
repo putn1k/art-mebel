@@ -1,0 +1,26 @@
+.order-steps {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--main-text);
+  background-color: var(--contrast-bg);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: grid;
+    row-gap: 20px;
+    counter-reset: steps;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}

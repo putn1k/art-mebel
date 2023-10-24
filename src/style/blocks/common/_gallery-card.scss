@@ -1,0 +1,20 @@
+.gallery-card {
+  position: relative;
+  height: 150px;
+  border-radius: var(--b-radius);
+  overflow: hidden;
+
+  & img {
+    display: block;
+
+    @include full-size;
+  }
+
+  @include media-min ($md) {
+    height: 210px;
+  }
+
+  @include media-min ($xl) {
+    height: 350px;
+  }
+}

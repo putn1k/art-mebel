@@ -1,0 +1,88 @@
+.header-modal {
+  pointer-events: none;
+
+  &[aria-hidden="false"] {
+    position: fixed;
+    top: var(--offset-top);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    & .header-modal__content {
+      display: block;
+
+      @include anim(fade-left, .3s);
+    }
+  }
+
+  &__content {
+    --pl: max(15px, calc((100% - var(--pl-offset, 510px)) / 2));
+
+    position: fixed;
+    top: var(--offset-top);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+    width: 80%;
+    color: var(--main-text);
+    background-color: var(--main-bg);
+    overflow: auto;
+    padding: 30px 30px 50px var(--pl);
+  }
+
+  &__inner {
+    display: grid;
+    row-gap: 24px;
+
+    & nav {
+      display: grid;
+      row-gap: 24px;
+
+      &>ul {
+        margin-bottom: -16px;
+      }
+    }
+
+    & hr {
+      margin: 0;
+      opacity: 0.5;
+    }
+  }
+
+  &__phone {
+    & a {
+      color: inherit;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+
+  &__messengers {
+    display: grid;
+    row-gap: 16px;
+  }
+
+  @include media-min ($md) {
+    &__content {
+      --pl-offset: 690px;
+
+      width: 60%;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__content {
+      --pl-offset: 930px;
+    }
+  }
+
+  @include media-min ($xl) {
+    display: none;
+  }
+}

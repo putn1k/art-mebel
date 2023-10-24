@@ -1,0 +1,82 @@
+.main-testimonials {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &__tagline {
+    margin-bottom: 30px;
+    text-align: center;
+
+    &>span {
+      display: block;
+      margin-top: 6px;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    height: 0;
+    padding-bottom: 75%;
+    border-radius: var(--b-radius);
+    overflow: hidden;
+
+    & img {
+      @include full-size;
+
+      display: block;
+    }
+  }
+
+  &__controls {
+    display: none;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 70px;
+
+    &__tagline {
+      margin-bottom: 40px;
+    }
+
+    &__slide {
+      padding-bottom: 50%;
+    }
+
+    &__pagination {
+      display: none;
+    }
+
+    &__controls {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 670px;
+      pointer-events: none;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__controls {
+      max-width: 910px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    &__slide {
+      padding-bottom: 38%;
+    }
+
+    &__controls {
+      max-width: 1090px;
+    }
+  }
+}

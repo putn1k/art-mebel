@@ -1,0 +1,43 @@
+.burger {
+  display: flex;
+  width: 32px;
+  padding: var(--burger-offset, 0);
+  cursor: pointer;
+  color: var(--burger-color, inherit);
+  border: none;
+  background-color: transparent;
+
+  &__icon {
+    width: 100%;
+    user-select: none;
+    transform: var(--burger-position);
+    transition: transform var(--burger-animation-time, 0.4s);
+    pointer-events: none;
+  }
+
+  &__line {
+    transition: stroke-dasharray var(--burger-animation-time, 0.4s), stroke-dashoffset var(--burger-animation-time, 0.4s);
+    fill: none;
+    stroke: currentColor;
+    stroke-width: var(--burger-weight, 3);
+    stroke-linecap: round;
+
+    &--top {
+      stroke-dasharray: 36px 145px;
+      stroke-dashoffset: var(--burger-dashoffset);
+    }
+
+    &--middle {
+      stroke-dasharray: 36px 145px;
+      transform: var(--burger-middle-position);
+      transform-origin: 50%;
+      transition: transform var(--burger-animation-time, 0.4s);
+    }
+
+    &--bottom {
+      stroke-dasharray: 36px 145px;
+      stroke-dashoffset: var(--burger-dashoffset);
+      transform-origin: 50%;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.action-block {
+  position: relative;
+  box-shadow: 1px 3px 24px 0 rgba(31, 45, 51, 0.04);
+
+  &__cover {
+    display: block;
+    width: 100%;
+    height: 200px;
+  }
+
+  &__content {
+    color: var(--main-text);
+    background-color: var(--main-bg);
+    padding: 24px 15px;
+    text-align: center;
+    min-height: 265px;
+  }
+
+  &__descr {
+    @include cms-text;
+
+    margin: 24px 0;
+  }
+
+  @include media-min ($md) {
+    display: flex;
+    justify-content: center;
+
+    &__cover {
+      @include full-size;
+
+      z-index: 0;
+    }
+
+    &__content {
+      position: relative;
+      padding: 50px 24px;
+      min-height: auto;
+      max-width: 330px;
+    }
+
+    &__descr {
+      margin: 24px 0 30px;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__content {
+      max-width: 470px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__content {
+      padding: 64px 40px;
+      max-width: 540px;
+    }
+  }
+}

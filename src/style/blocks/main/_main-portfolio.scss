@@ -1,0 +1,30 @@
+.main-portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &__tagline {
+    margin-bottom: 30px;
+    text-align: center;
+
+    &>span {
+      display: block;
+      margin-top: 6px;
+    }
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__tagline {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

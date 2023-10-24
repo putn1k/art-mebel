@@ -1,0 +1,41 @@
+:root {
+  --white: #FFFFFF;
+  --gray100: #1F2D33;
+  --gray70: #505565;
+  --gray50: #BDC1C2;
+  --gray10: #F3F5F6;
+  --red100: #BD0300;
+  --red40: #F56C69;
+
+  // other vars
+  --mobile-min-width: 360px;
+  --main-font: "Inter";
+  --b-radius: 4px;
+  --logo-offset: 190px;
+  --offset-top: 61px;
+
+  // theme vars
+  --main-text: var(--gray100);
+  --main-text-inv: var(--white);
+  --main-bg: var(--white);
+  --main-bg-inv: var(--gray70);
+  --dark-block-text: var(--white);
+  --dark-block-bg: var(--gray100);
+  --contrast-bg: var(--gray10);
+  --accent: var(--red100);
+  --error: var(--red100);
+  --link-hover: var(--red40);
+  --btn-color: var(--white);
+  --btn-bg: var(--red100);
+  --btn-hover-bg: var(--red40);
+  --scroll-top-btn-color: var(--accent);
+  --scroll-top-icon-color: var(--white);
+  --border: var(--gray50);
+  --btn-radius: var(--b-radius);
+  --bc-text: var(--gray50);
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;

@@ -1,0 +1,30 @@
+<div class="@if(context.addClass){@addClass} project-card">
+  <div class="project-card__gallery slider">
+    <div class="swiper-wrapper slider__wrapper">
+      <div class="swiper-slide project-card__slide">
+        <img src="img/mock/project-img-1.jpg"
+             alt="">
+      </div>
+      <div class="swiper-slide project-card__slide">
+        <img src="img/mock/project-img-2.jpg"
+             alt="">
+      </div>
+      <div class="swiper-slide project-card__slide">
+        <img src="img/mock/project-img-3.jpg"
+             alt="">
+      </div>
+    </div>
+    <div class="project-card__controls">@include('slider-controls.html')</div>
+  </div>
+  <div class="project-card__meta">
+    <div class="title-sm project-card__title">@title</div>
+    <ul class="project-card__props">
+      <li>3*4*2 м</li>
+      <li>21 день</li>
+      <li>Арбеково</li>
+    </ul>
+    <div class="project-card__result">Стоимость кухни 89 600 руб.</div>
+    <a class="project-card__link"
+       href="page-project.html"><span class="visually-hidden">Подробнее</span></a>
+  </div>
+</div>

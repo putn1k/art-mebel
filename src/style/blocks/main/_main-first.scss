@@ -1,0 +1,41 @@
+.main-first {
+  &__pagination {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__controls {
+    display: none;
+  }
+
+  @include media-min ($md) {
+    &__pagination {
+      display: none;
+    }
+
+    &__controls {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 720px;
+      pointer-events: none;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__controls {
+      max-width: 960px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__controls {
+      max-width: 1140px;
+    }
+  }
+}

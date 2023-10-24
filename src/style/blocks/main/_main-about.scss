@@ -1,0 +1,54 @@
+.main-about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--main-text);
+  background-color: var(--contrast-bg);
+
+  &__cover {
+    margin-bottom: 30px;
+    border-radius: var(--b-radius);
+    overflow: hidden;
+
+    &>* {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    @include cms-text;
+  }
+
+  &__advantages {
+    display: grid;
+    gap: 20px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &__advantages {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+
+    &__content {
+      margin-bottom: 40px;
+    }
+  }
+}

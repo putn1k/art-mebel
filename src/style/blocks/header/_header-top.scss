@@ -1,0 +1,18 @@
+.header-top {
+  display: none;
+
+  @include media-min ($xl) {
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: var(--main-text);
+    background-color: var(--contrast-bg);
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: var(--logo-offset);
+    }
+  }
+}
