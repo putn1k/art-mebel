@@ -17,6 +17,7 @@ const initProjectCardGallery = () => {
 const initSliders = () => {
   initSlider( '.main-first', configSwiper.Hero );
   initSlider( '.main-testimonials__slider', configSwiper.Reviews );
+  initSlider( '.roomtour__slider', configSwiper.Roomtour );
   initProjectCardGallery();
 };
 

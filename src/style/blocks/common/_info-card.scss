@@ -1,0 +1,46 @@
+.info-card {
+  color: var(--main-text);
+  background-color: var(--main-bg);
+  border-radius: var(--b-radius);
+  overflow: hidden;
+  box-shadow: 1px 3px 24px 0 rgba(31, 45, 51, 0.04);
+
+  &__img {
+    position: relative;
+    height: 155px;
+    overflow: hidden;
+
+    & img {
+      display: block;
+
+      @include full-size;
+    }
+  }
+
+  &__meta {
+    padding: 16px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+    min-height: 250px;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
+
+    &__img {
+      height: 100%;
+      flex-basis: 100%;
+    }
+
+    &__meta {
+      flex-basis: 100%;
+      padding: 30px;
+    }
+  }
+}

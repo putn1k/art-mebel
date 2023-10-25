@@ -1,0 +1,28 @@
+.landing-advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--main-text-inv);
+  background-color: var(--main-bg-inv);
+
+  &__title {
+    margin-bottom: 30px;
+
+    &>div {
+      margin-top: 16px;
+    }
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}

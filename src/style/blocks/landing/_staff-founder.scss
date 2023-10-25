@@ -1,0 +1,25 @@
+.staff-founder {
+  &__photo {
+    position: relative;
+    border-radius: var(--b-radius);
+    height: 380px;
+    overflow: hidden;
+
+    & img {
+      @include full-size;
+    }
+  }
+
+  &__name {
+    margin-bottom: 6px;
+  }
+
+  &__post {
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    @include cms-text;
+  }
+}

@@ -1,0 +1,25 @@
+<section class="information">
+  <div class="container">
+    <h2 class="visually-hidden">Информация о нас</h2>
+    <div class="title-lg information__title">Срок службы наших кухонь <div class="is-accent">в среднем 10-15 лет</div>
+    </div>
+    <div class="information__descr">
+      <div>Долговечность кухни зависит от материалов, от того, насколько хорошо обработана кромка и насколько аккуратно была собрана кухня при установке.</div>
+      <div><b>Именно этому мы и уделяем внимание.</b></div>
+    </div>
+    <div class="row">
+      <div class="col-12- col-md-6 mb-4">
+        @include('../common/info-card.html', {title: 'Что-то про установку', img: '01', addClass: 'full-height'})
+      </div>
+      <div class="col-12- col-md-6 mb-4">
+        @include('../common/info-card.html', {title: 'Кромки', img: '02', addClass: 'full-height'})
+      </div>
+      <div class="col-12- col-md-6 mb-4">
+        @include('../common/info-card.html', {title: 'Крутые шурупы', img: '03', addClass: 'full-height info-card--reverse'})
+      </div>
+      <div class="col-12- col-md-6 mb-4">
+        @include('../common/info-card.html', {title: 'Еврозапил', img: '04', addClass: 'full-height info-card--reverse'})
+      </div>
+    </div>
+  </div>
+</section>

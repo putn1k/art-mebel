@@ -1,0 +1,46 @@
+.production-card {
+  color: var(--main-text);
+  background-color: var(--main-bg);
+  border-radius: var(--b-radius);
+  overflow: hidden;
+  box-shadow: 1px 3px 24px 0 rgba(31, 45, 51, 0.04);
+
+  &__img {
+    position: relative;
+    height: 236px;
+    overflow: hidden;
+
+    & img {
+      display: block;
+
+      @include full-size;
+    }
+  }
+
+  &__meta {
+    padding: 24px;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__descr {
+    @include cms-text;
+
+    &>ul,
+    &>ol {
+      padding-left: 24px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__img {
+      height: 250px;
+    }
+  }
+}

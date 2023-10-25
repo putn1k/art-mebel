@@ -13,6 +13,7 @@
   &__poster {
     position: relative;
     height: 200px;
+    border-radius: var(--b-radius);
     overflow: hidden;
 
     & img {

@@ -92,6 +92,26 @@ export const Options = {
         },
       },
     },
+    Roomtour: {
+      slidesPerView: 2,
+      lazy: true,
+      navigation: {
+        prevEl: '.roomtour [data-to-slide="prev"]',
+        nextEl: '.roomtour [data-to-slide="next"]',
+      },
+      pagination: {
+        el: '.roomtour__pagination',
+        clickable: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    },
     ProjectCard: {
       loop: true,
       lazy: true,

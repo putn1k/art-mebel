@@ -1,0 +1,30 @@
+.information {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: var(--main-text);
+  background-color: var(--main-bg);
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    @include cms-text;
+
+    margin-bottom: 30px;
+  }
+
+  @include media-min ($md) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    &__descr {
+      margin-bottom: 40px;
+    }
+  }
+}

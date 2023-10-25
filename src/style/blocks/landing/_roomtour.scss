@@ -1,5 +1,4 @@
-.main-testimonials {
-  padding-top: 30px;
+.roomtour {
   padding-bottom: 60px;
   color: var(--main-text);
   background-color: var(--main-bg);
@@ -62,7 +61,6 @@
   }
 
   @include media-min ($xl) {
-    padding-top: 40px;
     padding-bottom: 80px;
 
     &__slide {
